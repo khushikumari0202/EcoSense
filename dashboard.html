@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="user-info">
+                <img id="user-pic" src="default-profile.png" alt="Profile Picture">
+                <h2>Welcome home, <span id="user-name"></span></h2>
+            </div>
+            <button id="logout-btn">Logout</button>
+        </header>
+
+        <main>
+            <h3>Your Rooms</h3>
+            <div class="rooms-container" id="rooms-container">
+                <p id="no-rooms-text">No rooms added yet.</p>
+            </div>
+            <button id="add-room-btn">Add Room</button>
+        </main>
+    </div>
+
+    <!-- Right-Click Context Menu -->
+    <div id="context-menu" class="hidden">
+        <ul>
+            <li id="open-room">Open Room</li>
+            <li id="delete-room">Delete Room</li>
+        </ul>
+    </div>
+
+    <!-- Add Room Modal -->
+    <div id="add-room-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Add New Room</h2>
+            <input type="text" id="room-name" placeholder="Enter Room Name">
+            <input type="file" id="room-image" accept="image/*">
+            <button id="save-room-btn">Save Room</button>
+            <button id="close-modal">Cancel</button>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
