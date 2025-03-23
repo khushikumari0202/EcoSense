@@ -11,21 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentRoom = sessionStorage.getItem("currentRoom");
     if (!currentRoom) {
-        window.location.href = "dashboard.html"; // Redirect if no room selected
+        alert("No room selected!");
+        window.location.href = "index.html"; // Redirect back if no room is selected
     } else {
         roomTitle.textContent = currentRoom;
     }
 
     backBtn.addEventListener("click", () => {
-        window.location.href = "dashboard.html";
+        window.location.href = "index.html"; // Go back to home
     });
 
     addDeviceBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
+        modal.style.display = "block";
     });
 
     closeDeviceModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
+        modal.style.display = "none";
     });
 
     saveDeviceBtn.addEventListener("click", () => {
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.setItem(currentRoom, JSON.stringify(roomDevices));
 
-        modal.classList.add("hidden");
+        modal.style.display = "none";
         deviceNameInput.value = "";
         renderDevices();
     });
