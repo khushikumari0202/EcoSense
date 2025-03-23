@@ -1,180 +1,98 @@
-/* General Styles */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
 }
 
-/* Container */
+/* Main Container */
 .container {
-    width: 350px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+    width: 375px; /* Mobile width */
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Form */
-h2 {
-    color: #333;
-}
-
-.input-group {
-    text-align: left;
-    margin: 15px 0;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background: #695b45;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #ebd4b0;
-}
-
-/* Toggle Link */
-#toggle-form {
-    font-size: 14px;
-    margin-top: 15px;
-}
-
-#toggle-form a {
-    color: #656868;
-    cursor: pointer;
-}
-
-/* Hidden class for toggling */
-.hidden {
-    display: none;
-}
-
-/* Dashboard Styles */
-.dashboard-container {
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: center;
-}
-
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
+h1 {
+    font-size: 22px;
 }
 
-.user-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-#logout-btn {
-    background: rgb(215, 106, 106);
+.login-btn {
+    background: #ff6b6b;
     color: white;
+    padding: 5px 12px;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-#logout-btn:hover {
-    background: rgb(218, 109, 109);
-}
-
-/* Room Cards */
-.rooms-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.room-card {
-    width: 150px;
-    padding: 10px;
-    border-radius: 10px;
+/* Box Styles */
+.box {
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative;
-    cursor: pointer;
+    margin-bottom: 25px;
 }
 
-.room-card img {
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
-    object-fit: cover;
+/* Energy Saved */
+.energy-saved {
+    background: #d4f8d4;
 }
 
-/* Context Menu */
-#context-menu {
-    position: absolute;
+/* Grid Layout for Weather & Energy Used */
+.info-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.weather, .energy-used {
+    flex: 1;
+}
+
+/* Bill Section */
+.bill {
+    background: #ffd166;
+}
+
+/* Bottom Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
     background: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    display: none;
-    z-index: 1000;
-    border-radius: 5px;
+    padding: 10px 0;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#context-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#context-menu li {
-    padding: 10px;
-    cursor: pointer;
+.navbar a {
+    text-decoration: none;
+    color: black;
     font-size: 14px;
 }
 
-#context-menu li:hover {
-    background: #f0f0f0;
-}
-
-/* Hide elements */
-.hidden {
-    display: none;
+.navbar a.active {
+    font-weight: bold;
+    color: #ff6b6b;
 }

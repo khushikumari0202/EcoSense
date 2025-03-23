@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Login</title>
+    <title>EcoSense</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <div class="form-box">
-            <h2 id="form-title">Login</h2>
-            <form id="auth-form">
-                <div id="name-field" class="input-group hidden">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
-                </div>
-                <div id="profile-field" class="input-group hidden">
-                    <label for="profile-pic">Profile Picture</label>
-                    <input type="file" id="profile-pic" accept="image/*">
-                </div>
-                <button type="submit" id="submit-btn">Login</button>
-            </form>
-            <p id="toggle-form">Don't have an account? <a href="#">Register</a></p>
-        </div>
+        <!-- Header -->
+        <header>
+            <h1>EcoSense</h1>
+            <button class="login-btn">Login / Register</button>
+        </header>
+
+        <!-- Energy Saved -->
+        <section class="energy-saved box">
+            <h3>Energy Saved</h3>
+            <p>200 kWh</p>
+        </section>
+
+        <!-- Weather & Energy Used in Grid -->
+        <section class="info-grid">
+            <div class="box weather">
+                <h3>Weather</h3>
+                <p id="weather-data">Loading...</p>
+            </div>
+            <div class="box energy-used">
+                <h3>Energy Used Today</h3>
+                <p>50 kWh</p>
+            </div>
+        </section>
+
+        <!-- Bill Generated -->
+        <section class="bill box">
+            <h3>Bill Generated Today</h3>
+            <p>$400</p>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="navbar">
+            <a href="#" class="active">🏠 Home</a>
+            <a href="#">🏡 Rooms</a>
+            <a href="#">📊 Stats</a>
+            <a href="#">👤 Profile</a>
+        </nav>
     </div>
 
     <script src="script.js"></script>
